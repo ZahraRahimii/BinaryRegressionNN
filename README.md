@@ -1,6 +1,6 @@
 # BinaryRegressionNN
 
-### 🧠 Project Overview
+### Project Overview
 
 This project implements a simple **binary logistic regression** model and a **two-layer neural network** using NumPy from scratch. The main steps are as follows:
 
