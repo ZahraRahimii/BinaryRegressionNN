@@ -2,11 +2,47 @@
 
 ### Project Overview
 
-This project implements a simple **binary logistic regression** model and a **two-layer neural network** using NumPy from scratch. The main steps are as follows:
+1. **Data Loading & Preprocessing**
 
-* **Dataset**: The [Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris) is used for binary classification. For simplicity, only the *Setosa* and *Versicolor* classes are selected.
-* **Data Preparation**: The dataset is visualized, normalized (if needed), and split into training and testing sets.
-* **Loss Function**: **Cross-Entropy Loss** is used for model evaluation and optimization.
-* **Evaluation Metrics**: Includes **Accuracy**, **Precision**, **Recall**, and **F1 Score**.
-* **Visualization**: Training/testing loss curves and performance under different hyperparameters, dataset sizes, and learning rates.
-* **Experiment Tracking**: Integrates with **Weights & Biases (wandb)** and **Comet.ml** for experiment tracking and result analysis.
+   * Load the **[Iris dataset](https://archive.ics.uci.edu/ml/datasets/iris)** and filter it to only two classes: *Setosa* and *Versicolor*.
+   * Normalize the features to a \[0, 1] range.
+
+2. **Logistic Regression (Binary Classification)**
+
+   * Implement logistic regression using **Sigmoid activation**.
+   * Use **Cross-Entropy Loss** for training.
+   * Optimize the model using **gradient descent**.
+
+3. **Two-Layer Neural Network**
+
+   * Build a simple feed-forward neural network with **one hidden layer** using **ReLU** activation.
+   * Use **Sigmoid** in the output layer for binary probability prediction.
+
+4. **Evaluation Metrics**
+
+   * Evaluate models using:
+
+     * **Accuracy**
+     * **Precision**
+     * **Recall**
+     * **F1 Score**
+   * Compare metrics across models.
+
+5. **Loss Curve & Overfitting**
+
+   * Plot training/test loss over epochs.
+   * Investigate the effects of **overfitting** and **underfitting**.
+   * Study model behavior by changing:
+
+     * Learning rate
+     * Number of hidden units
+     * Number of layers
+     * Regularization (Dropout, L2)
+
+6. **Experiment Tracking**
+
+   * Use **W\&B** and **Comet.ml** for:
+
+     * Logging metrics
+     * Visualizing model performance
+     * Comparing different hyperparameters
